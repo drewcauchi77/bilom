@@ -1,0 +1,130 @@
+.register-form-container{
+    position: absolute;
+    background: white;
+    height: calc(100vh - 92px);
+    width: 100vw;
+    top: 92px;
+    transition: .5s all;
+    right: -100vw;
+    z-index: 51;
+    overflow: auto;
+    .container{
+        form{
+            .registration-form{
+                .registration-form-title{
+                    text-align: center;
+                    font-size: 25px;
+                    font-family: $ubuntu-bold;
+                    margin-bottom: 30px;
+                }
+                .form-group{
+                    margin-bottom: 20px;
+                    .form-control{
+                        width: calc(100% - 30px);
+                        border: 1px solid rgba(21,21,21,0.5);
+                        font-family: $opensans-regular;
+                        font-size: 14px;
+                        height: 50px;
+                        padding: 0px 15px;
+                        &:focus{
+                            border-color: $site-black;
+                            &::placeholder{
+                                color: $site-black;
+                            }
+                        }
+                    }
+                    input[type=submit]{
+                        height: 50px;
+                        width: 100%;
+                        border: 1px solid $site-red;
+                        background-color: $site-red;
+                        text-transform: uppercase;
+                        color: white;
+                        font-family: $ubuntu-medium;
+                        font-size: 14px;
+                        transition: 0.5s all;
+                        cursor: pointer;
+                        margin-bottom: 30px;
+                        &:hover{
+                            background-color: transparent;
+                            color: $site-red;
+                        }
+                    }
+                    .login-text{
+                        font-family: $opensans-regular;
+                        font-size: 14px;
+                        text-align: center;
+                        .login-button{
+                            font-family: $opensans-bold;
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .facebook-register{
+                    margin-bottom: 30px;
+                    .f-register-text{
+                        text-align: center;
+                        font-size: 16px;
+                        font-family: $opensans-regular;
+                        margin-bottom: 30px;
+                        &:before, &:after{
+                            background-color: #000;
+                            content: "";
+                            display: inline-block;
+                            height: 1px;
+                            position: relative;
+                            vertical-align: middle;
+                            width: 30%;
+                        }
+                        &:before{
+                            right: 0.7em;
+                            margin-left: -50%;
+                        }
+                        &:after{
+                            left: 0.7em;
+                            margin-right: -50%;
+                        }
+                    }
+                    .facebook-button{
+                        height: 50px;
+                        width: 150px;
+                        text-align: center;
+                        line-height: 48px;
+                        background-color: $dark-grey;
+                        margin: 0 auto;
+                        color: white;
+                        font-family: $ubuntu-medium;
+                        font-size: 14px;
+                        a{
+                            display: grid;
+                            grid-template-columns: 30px auto;
+                            grid-column-gap: 5px;
+                            text-decoration: none;
+                            img{
+                                justify-self: end;
+                                align-self: center;
+                            }
+                            .f-button-text{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.focus{
+        right: 0;
+    }
+}
+
+@media only screen and ($large-devices){
+    .register-form-container{
+        right: 0px;
+        display: none;
+        &.focus{
+            display: block;
+        }
+    }
+}

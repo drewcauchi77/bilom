@@ -1,0 +1,61 @@
+@font-face{
+	font-family: "OpenSansBold";
+	src: url(../fonts/OpenSans_Bold/OpenSans-Bold.otf),
+		url(../fonts/OpenSans_Bold/OpenSans-Bold.ttf) format('truetype'),
+		url(../fonts/OpenSans_Bold/OpenSans-Bold.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "OpenSansRegular";
+	src: url(../fonts/OpenSans_Regular/OpenSans-Regular.otf),
+		url(../fonts/OpenSans_Regular/OpenSans-Regular.ttf) format('truetype'),
+		url(../fonts/OpenSans_Regular/OpenSans-Regular.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "OpenSansSemibold";
+	src: url(../fonts/OpenSans_Semibold/OpenSans-Semibold.otf),
+		url(../fonts/OpenSans_Semibold/OpenSans-Semibold.ttf) format('truetype'),
+		url(../fonts/OpenSans_Semibold/OpenSans-Semibold.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "UbuntuBold";
+	src: url(../fonts/Ubuntu_Bold/Ubuntu-Bold.otf),
+		url(../fonts/Ubuntu_Bold/Ubuntu-Bold.ttf) format('truetype'),
+		url(../fonts/Ubuntu_Bold/Ubuntu-Bold.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "UbuntuMedium";
+	src: url(../fonts/Ubuntu_Medium/Ubuntu-Medium.otf),
+		url(../fonts/Ubuntu_Medium/Ubuntu-Medium.ttf) format('truetype'),
+		url(../fonts/Ubuntu_Medium/Ubuntu-Medium.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "UbuntuLight";
+	src: url(../fonts/Ubuntu_Light/Ubuntu-Light.otf),
+		url(../fonts/Ubuntu_Light/Ubuntu-Light.ttf) format('truetype'),
+		url(../fonts/Ubuntu_Light/Ubuntu-Light.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$opensans-bold: 'OpenSansBold', sans-serif;
+$opensans-regular: 'OpenSansRegular', sans-serif;
+$opensans-semibold: 'OpenSansSemibold', sans-serif;
+
+$ubuntu-bold: 'UbuntuBold', sans-serif;
+$ubuntu-medium: 'UbuntuMedium', sans-serif;
+$ubuntu-light: 'UbuntuLight', sans-serif;

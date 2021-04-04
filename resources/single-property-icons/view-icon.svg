@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Group_682" data-name="Group 682" transform="translate(-451 -939)">
+    <circle id="Ellipse_17" data-name="Ellipse 17" cx="15" cy="15" r="15" transform="translate(451 939)" fill="#151515"/>
+    <g id="Interface-Essential_View_view-1" data-name="Interface-Essential / View / view-1" transform="translate(201.997 -2395.223)">
+      <g id="Group_331" data-name="Group 331" transform="translate(256.503 3343.5)">
+        <g id="view-1" transform="translate(0 0)">
+          <path id="Shape_1534" data-name="Shape 1534" d="M263.754,3344.251c-2.866-.061-5.83,2.443-7.693,5.008a1.763,1.763,0,0,0,0,1.979c1.823,2.51,4.778,5.072,7.693,5.011,2.915.061,5.871-2.5,7.7-5.011a1.763,1.763,0,0,0,0-1.979C269.583,3346.694,266.619,3344.19,263.754,3344.251Z" transform="translate(-256.256 -3344.527)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          <path id="Shape_1535" data-name="Shape 1535" d="M267.255,3349.25a2,2,0,1,1-.586-1.415,2,2,0,0,1,.586,1.415Z" transform="translate(-257.755 -3343.527)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

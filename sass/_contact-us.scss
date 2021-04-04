@@ -1,0 +1,218 @@
+.contact-us-container{
+    .page-title{
+        text-align: center;
+        font-family: $ubuntu-bold;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .contact-form{
+        .screen-reader-response{
+            font-family: $opensans-regular;
+            font-size: 14px;
+            padding-bottom: 20px;
+            color: $site-red;
+            ul{
+                display: none;
+            }
+        }
+        form{
+            .cf-sect{
+                padding-right: 30px;
+                margin-bottom: 20px;
+                span{
+                    input, textarea{
+                        width: 100%;
+                        border: 1px solid rgba(21,21,21,0.5);
+                        font-family: $opensans-regular;
+                        font-size: 14px;
+                        position: relative;
+                        &:focus{
+                            border-color: $site-black;
+                            &::placeholder{
+                                color: $site-black;
+                            }
+                        }
+                    }
+                    input{
+                        height: 50px;
+                        padding: 0px 15px;
+                    }
+                    textarea{
+                        padding: 15px;
+                    }
+                    .wpcf7-not-valid-tip{
+                        font-family: $opensans-regular;
+                        font-size: 10px;
+                        color: $site-red;
+                    }
+                }
+            }
+            .terms-accept{
+                padding: 0px;
+                margin-bottom: 30px;
+                .acceptance-field{
+                    label{
+                        display: grid;
+                        grid-template-columns: 30px auto;
+                        input[type=checkbox]{
+                            width: 20px !important;
+                            height: 20px !important;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            -o-appearance: none;
+                            appearance:none;
+                            border: 1px solid rgba(21,21,21,0.5);
+                            font-size: 2em;
+                            margin: 0px;
+                            padding: 0px;
+                            cursor: pointer;
+                            &:checked{
+                                background-color: $site-black;
+                                outline: 1px solid $site-black;
+                                border: 2px solid white;
+                            }
+                        }
+                        span{
+                            font-family: $opensans-regular;
+                            font-size: 14px;
+                            a{
+                                color: $site-black;
+                            }
+                        }
+                    }
+                }
+            }
+            .submit-button{
+                padding-right: 0px;
+                margin-bottom: 0px;
+                .wpcf7-submit{
+                    background-color: $site-red;
+                    width: 100%;
+                    height: 50px;
+                    text-transform: uppercase;
+                    border: 1px solid $site-red;
+                    font-family: $ubuntu-medium;
+                    font-size: 14px;
+                    color: white;
+                    letter-spacing: 0.9px;
+                    transition: 0.5s all;
+                    cursor: pointer;
+                    &:hover{
+                        color: $site-red;
+                        background-color: transparent;
+                    }
+                }
+            }
+            .wpcf7-response-output{
+                display: none !important;
+            }
+        }
+    }
+    .company-details{
+        text-align: center;
+        font-family: $opensans-regular;
+        font-size: 14px;
+        padding: 40px 0px;
+        line-height: 22px;
+        .company-address-section{
+            .company-address{
+                margin: 0px;
+                display: block;
+            }
+        }
+    }
+    #map{
+        height:330px;
+        // background-color: $site-black;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and ($large-devices){
+    .contact-us-container{
+        padding-top: 90px;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas:
+            'pagetitle map'
+            'contactform map'
+            'companydetails companydetails';
+        grid-column-gap: 80px;
+        .page-title{
+            grid-area: pagetitle;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+        .contact-form{
+            grid-area: contactform;
+            form{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 15px;
+                grid-template-areas:
+                    'subject subject'
+                    'name surname'
+                    'email telephone'
+                    'message message'
+                    'terms terms'
+                    'submit submit';
+                .subject-section{
+                    grid-area: subject;    
+                }
+                .name-section{
+                    grid-area: name;
+                }
+                .surname-section{
+                    grid-area: surname;
+                }
+                .email-section{
+                    grid-area: email;
+                }
+                .telephone-section{
+                    grid-area: telephone;
+                }
+                .message-section{
+                    grid-area: message;
+                }
+                .terms-accept{
+                    grid-area: terms;
+                }
+                .submit-button{
+                    grid-area: submit;
+                    input{
+                        max-width: 140px;
+                    }
+                }
+            }   
+        }
+        .company-details{
+            grid-area: companydetails;
+            text-align: left;
+            .company-address-section{
+                .company-address{
+                    display: inline;
+                }
+            }
+        }
+        #map{
+            grid-area: map;
+            height: 100%;
+            margin-bottom: 0px;
+        }
+    }
+    .page-template-contactus-template{
+        #page{
+            #content{
+                .user-account-welcome-screen, .user-account-dashboard, .favourites-list{
+                    top: -101px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and ($xl-devices){
+    .contact-us-container{
+        grid-column-gap: 200px;
+    }
+}

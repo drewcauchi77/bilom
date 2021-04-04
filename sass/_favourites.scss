@@ -1,0 +1,128 @@
+.favourites-list{
+    position: absolute;
+    background: white;
+    height: calc(100vh - 92px);
+    width: 100vw;
+    top: 92px;
+    transition: .5s all;
+    right: -100vw;
+    z-index: 51;
+    overflow: auto;
+    .container{
+        padding-bottom: 50px;
+        .go-back-welcome-screen{
+            cursor: pointer;
+        }
+        .favourite-listings-title{
+            text-align: center;
+            font-family: $ubuntu-bold;
+            font-size: 23px;
+            padding-bottom: 10px;
+        }
+        .favorites-list{
+            .favourite-element{
+                padding-bottom: 30px;
+                p{
+                    margin: 0px;
+                }
+                a{
+                    text-decoration: none;
+                    margin: 0px;
+                    font-size: 12px;
+                    font-family: $opensans-semibold;
+                    color: $site-black;
+                    .property-image{
+                        height: 200px;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .property-contents{
+                        display: grid;
+                        grid-template-rows: auto auto;
+                        grid-row-gap: 20px;
+                        padding: 20px 15px;
+                        border: 1px solid rgba(0,0,0,0.1);
+                        p{
+                            margin: 0px;
+                        }
+                        .property-details{
+                            display: grid;
+                            grid-template-columns: 1fr 100px;
+                            p{
+                                display: none;
+                            }
+                            .property-price{
+                                font-size: 18px;
+                                font-family: $ubuntu-bold;
+                            }
+                            .lower-section{
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                .amenity{
+                                    opacity: 0.5;
+                                    display: grid;
+                                    grid-template-columns: auto auto;
+                                    grid-template-areas: 'amenityimage amount';
+                                    .number-of{
+                                        grid-area: amount;
+                                    }
+                                    .amenity-image{
+                                        grid-area: amenityimage;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .simplefavorites-clear{
+            background-color: $site-red;
+            border: 1px solid $site-red;
+            height: 50px;
+            width: 100%;
+            text-transform: uppercase;
+            font-family: $ubuntu-medium;
+            font-size: 14px;
+            letter-spacing: .7px;
+            cursor: pointer;
+            transition: .5s all;
+            text-align: center;
+            color: white;
+            &:hover{
+                color: $site-red;
+                background-color: transparent;
+            }
+        }
+    }
+    .no-favorites{
+        font-family: $opensans-regular;
+        font-size: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &.focus{
+        right: 0;
+    }
+}
+
+@media only screen and ($large-devices){
+    .favourites-list{
+        max-width: 350px;
+        top: -121px;
+        height: 100vh;
+        z-index: 55;
+        .container{
+            padding-top: 40px;
+        }
+    }
+}
+
+@media only screen and ($xl-devices){
+    .favourites-list{
+        max-width: 400px;
+    }
+}

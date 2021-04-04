@@ -1,0 +1,838 @@
+.page-template-properties-template{
+    #page{
+        #masthead{
+            // position: sticky;
+            // top: 0;
+            // z-index: 50;
+            background-color: $dark-grey;
+            padding-bottom: 0px;
+            .header-container{
+                .menu-container{
+                    .site-logo-section{
+                        .site-logo-link{
+                            .site-logo{
+                                filter: invert(1);
+                            }
+                        }
+                    }
+                    .menu-icons{
+                        .my-account-section{
+                            .my-account-icon{
+                                filter: invert(1);
+                            }
+                        }
+                        .mobile-menu-section{
+                            .mobile-menu-icon{
+                                filter: invert(1);
+                            }
+                        }
+                    }
+                }
+                .mobile-menu{
+                    background-color: $dark-grey;
+                    .mobile-menu-content{
+                        .close-mobile-menu-icon{
+                            filter: invert(1);
+                        }
+                        .mobile-nav-menu{
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+            .toggle-properties-search{
+                padding: 30px 0px;
+                text-align: center;
+                font-size: 16px;
+                color: #eaeaea;
+                text-transform: uppercase;
+                font-family: $ubuntu-bold;
+                .toggle-properties-search-text{
+                    cursor: pointer;
+                }
+            }
+            .properties-search{
+                position: absolute;
+                background: $dark-grey;
+                height: 100vh;
+                width: 100vw;
+                top: 0;
+                transition: 0.5s all;
+                right: -100vw;
+                z-index: 49;
+                overflow-y: auto;
+                .search-header{
+                    padding: 30px 0px 110px;
+                    position: sticky;
+                    top: 0;
+                    background-color: $dark-grey;
+                    z-index: 52;
+                    .close-properties-search-icon{
+                        padding-top: 65px;
+                        float: right;
+                        filter: invert(1);
+                        cursor: pointer;
+                    }
+                }
+                .search-form{
+                    padding-bottom: 30px;
+                    .wpp_shortcode_search_form{
+                        .wpp_search_elements{
+                            padding: 0px;
+                            .wpp_search_group{
+                                padding: 0px;
+                                margin-bottom: 0px;
+                                list-style-type: none;
+                                .wpp_search_form_element{
+                                    .wpp_search_label{
+                                        position: relative;
+                                        width: 100%;
+                                        height: 50px;
+                                        background-color: white;
+                                        color: rgba(0,0,0,0.5);
+                                        font-family: $opensans-regular;
+                                        font-size: 16px;
+                                        line-height: 48px;
+                                        margin-bottom: 20px;
+                                        width: calc(100% - 30px);
+                                        padding: 0 15px;
+                                        cursor: pointer;
+                                        img{
+                                            background-color: white;
+                                            position: absolute;
+                                            top: 0;
+                                            bottom: 0;
+                                            right: 0;
+                                            margin: auto;
+                                            height: fit-content;
+                                        }
+                                    }
+                                    .wpp_search_attribute_wrap{
+                                        display: none;
+                                        transition: 0.5s all;
+                                        .wpp_multi_checkbox{
+                                            width: 100%;
+                                            padding: 0px;
+                                            list-style-type: none;
+                                            display: inline-grid;
+                                            grid-template-columns: 1fr 1fr;
+                                            li{
+                                                width: 47%;
+                                                display: inline-grid;
+                                                grid-template-columns: auto 1fr;
+                                                grid-column-gap: 20px;
+                                                input[type=checkbox]{
+                                                    width: 20px !important;
+                                                    height: 20px !important;
+                                                    -webkit-appearance: none;
+                                                    -moz-appearance: none;
+                                                    -o-appearance: none;
+                                                    appearance:none;
+                                                    border: 1px solid rgba(234,234,234,0.5);
+                                                    font-size: 2em;
+                                                    margin: 0px;
+                                                    padding: 0px;
+                                                    cursor: pointer;
+                                                    &:checked{
+                                                        background-color: #eaeaea;
+                                                        outline: 1px solid #eaeaea;
+                                                        border: 2px solid $dark-grey;
+                                                    }
+                                                }
+                                                label{
+                                                    font-size: 14px;
+                                                    font-family: $opensans-regular;
+                                                    color: rgba(234,234,234,0.8);
+                                                }
+                                                &:nth-child(odd){
+                                                    margin-right: 4%;
+                                                }
+                                            }
+                                        }
+                                        &.open{
+                                            display: block;
+                                        }
+                                    }
+                                    .wpp_selectors_locality{
+                                        ul{
+                                            .Central,.North,.South,.Gozo{
+                                                display:none;
+                                            }
+                                        }
+                                    }
+                                    .wpp_search_label_price{
+                                        display: none !important;
+                                    }
+                                    .wpp_selectors_price{
+                                        margin-bottom: 20px;
+                                        display: grid;
+                                        grid-template-columns: 1fr 1fr;
+                                        grid-column-gap: 20px;
+                                        .wpp_dash{
+                                            display: none;
+                                        }
+                                        input{
+                                            height: 50px;
+                                            width: calc(100% - 30px);
+                                            padding: 0 15px;
+                                            border: none;
+                                            display: inline-block;
+                                            font-family: $opensans-regular;
+                                            &::placeholder{
+                                                color: rgba(0,0,0,0.5);
+                                                font-family: $opensans-regular;
+                                                font-size: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .toggle-additional-filters{
+                                    display: none;
+                                }
+                            }
+                            .submit{
+                                background-color: $site-red;
+                                border: 1px solid $site-red;
+                                height: 50px;
+                                width: 100%;
+                                color: #fff;
+                                text-transform: uppercase;
+                                font-family: $ubuntu-medium;
+                                font-size: 14px;
+                                letter-spacing: .7px;
+                                cursor: pointer;
+                                transition: .5s all;
+                                &:hover{
+                                    background-color: transparent;
+                                    color: white;
+                                    border-color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.visible{
+                    right: 0;
+                }
+            }
+        }
+        #content{
+            background-color: $light-grey;
+            padding: 30px 0px;
+            .properties-container{
+                display: none;
+            }
+            .wpp_property_overview_shortcode{
+                width: 85%;
+                margin: 0 auto;
+                max-width: 1364px;
+                .properties_pagination{
+                    .wpp_pagination_slider_status{
+                        .wpp_property_results_options{
+                            text-align: center;
+                            font-family: $opensans-regular;
+                            font-size: 14px;
+                            display: grid;
+                            grid-row-gap: 5px;
+                            .wpp_property_results{
+                                line-height: 30px;
+                            }
+                            .wpp_sorter_options{
+                                display: grid;
+                                grid-row-gap: 10px;
+                                .wpp_sortable_link{
+                                    background-color: $dark-grey;
+                                    border-radius: 0px;
+                                    color: white;
+                                }
+                            }
+                            .page-sorter{
+                                align-self: center;
+                            }
+                        }
+                    }
+                    .wpp_pagination_buttons_wrapper{
+                        padding: 20px 0px;
+                        position: fixed;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 25px;
+                        background-color: #D51F3D;
+                        border: 1px solid #D51F3D;
+                        z-index: 45;
+                        transition: 0.5s all;
+                        .property-overview-navigation{
+                            display: table;
+                            margin: 0 auto !important;
+                            font-family: $opensans-regular;
+                            li{
+                                a{
+                                    color:white;
+                                    border: 1px solid rgba(213, 31, 61, 0.8);
+                                    background-color: rgba(213, 31, 61, 0.8);
+                                    &:before{
+                                        color: white;
+                                    }
+                                }
+                                
+                            }
+                            .current-page{
+                                a{
+                                    background-color: white;
+                                    color: $site-red;
+                                }
+                            }
+                        }
+                    }
+                }
+                .all-properties{
+                    .property_div{
+                        -webkit-border-radius: 0;
+                        margin-bottom: 0px;
+                        padding: 0;
+                        position: relative;
+                        width: 100%;
+                        box-shadow: none;
+                        &:not(:last-child){
+                            margin-bottom: 30px;
+                        }
+                        .wpp_overview_left_column{
+                            .properties-gallery-property-images{
+                                .arrow{
+                                    cursor: pointer;
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    height: fit-content;
+                                    z-index: 10;
+                                    padding: 10px 8px;
+                                    backdrop-filter: blur(9px);
+                                    background-color: rgba(21,21,21,0.5);
+                                    img{
+                                        display: block;
+                                    }
+                                }
+                                .left-arrow{
+                                    left: 0;
+                                }
+                                .right-arrow{
+                                    right: 0;
+                                    transform: rotate(180deg);
+                                }
+                                div{
+                                    a{
+                                        img{
+                                            width: 100%;
+                                            height: 200px;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .wpp_overview_right_column{
+                            background-color: white;
+                            padding: 20px 15px;
+                            .wpp_overview_data{
+                                .property-information{
+                                    position: relative;
+                                    a{
+                                        text-decoration: none;
+                                        color: $site-black;
+                                        .property-details{
+                                             display: grid;
+                                             grid-template-columns: repeat(2,1fr);
+                                             grid-template-areas: 
+                                                 'location location'
+                                                 'price amenities';
+                                             grid-row-gap: 20px;
+                                             .property-location{
+                                                 grid-area: location;
+                                                 .location-text{
+                                                     margin: 0px;
+                                                     font-size: 12px;
+                                                     font-family: $opensans-semibold;
+                                                 }
+                                             }
+                                             .property-price{
+                                                 grid-area: price;
+                                                 .price-text{
+                                                     margin: 0px;
+                                                     font-size: 18px;
+                                                     font-family: $ubuntu-bold;
+                                                     .per-month{
+                                                         font-family: $ubuntu-light;
+                                                     }
+                                                 }
+                                             }
+                                             .property-main-amenities{
+                                                 grid-area: amenities;
+                                                 display: grid;
+                                                 grid-template-columns: auto auto;
+                                                 justify-content: end;
+                                                 align-content: center;
+                                                 grid-column-gap: 10px;
+                                                 .amenities-section{
+                                                     img{
+                                                         height:100%;
+                                                     }
+                                                     .no-of{
+                                                         font-size: 14px;
+                                                         font-family: $opensans-regular;
+                                                         opacity: 0.5;
+                                                     }
+                                                 }
+                                             }
+                                        }
+                                    }
+                                    .add-to-wishlist{
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+                .wpp_nothing_found{
+                    p{
+                        text-align: center;
+                        margin: 0px;
+                        font-family: $opensans-regular;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .user-account-container{
+                background-color: #414851;
+                color: white;
+                form{
+                    .facebook-login, .facebook-register{
+                        .facebook-button{
+                            background-color: #3b5998;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-template-properties-template{
+    #cookie-law-info-bar, #cookie-law-info-again, .cli-modal, #cli-modal-backdrop{
+        display: none !important;
+    }
+}
+
+@media only screen and ($medium-devices){
+    .page-template-properties-template{
+        #page{
+            #masthead{
+                .header-container{
+                    .menu-container{
+                        .menu-icons{
+                            .desktop-nav-section{
+                                filter: invert(1);
+                            }
+                            .my-account-section{
+                                filter: invert(1);
+                            }
+                        }
+                    }
+                }
+                .search-form{
+                    .wpp_shortcode_search_form{
+                        .wpp_search_elements{
+                            .wpp_search_group{
+                                .wpp_search_form_element{
+                                    .wpp_search_attribute_wrap{
+                                        .wpp_multi_checkbox{
+                                            grid-template-columns: 1fr 1fr 1fr !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #content{
+                .all-properties{
+                    .property_div{
+                        width: 47% !important;
+                        display: inline-block;
+                        &:nth-child(odd){
+                            margin-right: 3%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and ($large-devices){
+    .page-template-properties-template{
+        #page{
+            #content{
+                .user-account-container{
+                    top: -149px;
+                    z-index: 55;
+                    color: black;
+                    form{
+                        .facebook-login, .facebook-register{
+                            .facebook-button{
+                                background-color: $dark-grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and ($xl-devices){
+    .page-template-properties-template{
+        #page{
+            background-color: $light-grey;
+            overflow-x: unset;
+            #masthead{
+                position: sticky;
+                top: 0;
+                z-index: 50;
+                .header-container{
+                    .menu-container{
+                        .menu-icons{
+                            .desktop-nav-section{
+                                z-index: 50;
+                                .child-menu{
+                                    filter: invert(1);
+                                }
+                            }
+                        }
+                    }
+                }
+                .toggle-properties-search{
+                    display: none;
+                }
+                .properties-search{
+                    right: 0px;
+                    position: relative;
+                    height: fit-content;                 
+                    width: 85%;
+                    margin: 0 auto;
+                    max-width: 1364px;
+                    overflow-y: unset;
+                    .search-header{
+                        display: none;
+                    }
+                    .search-form{
+                        width: 100%;
+                        padding-top: 30px;
+                        .widget{
+                            .wpp_search_properties_widget{
+                                form{
+                                    .wpp_search_elements{
+                                        display: grid;
+                                        grid-template-columns: 4fr 1fr;
+                                        grid-column-gap: 10px;
+                                        .wpp_search_group{
+                                            ul{
+                                                display: grid;
+                                                grid-template-columns: repeat(4, 1fr);
+                                                grid-column-gap: 10px;
+                                                position: relative;
+                                                .seach_attribute_bathrooms, .seach_attribute_no_of_bedrooms, .seach_attribute_listing_amenities{
+                                                    position: absolute !important;
+                                                    width: 195px;
+                                                    right: 0;
+                                                }
+                                                .seach_attribute_no_of_bedrooms{
+                                                    display: none;
+                                                    .wpp_search_label{
+                                                        .title{
+                                                            font-family: $opensans-semibold;
+                                                            color: $site-black;
+                                                        }
+                                                        img{
+                                                            display: none;
+                                                        }
+                                                    }
+                                                    .wpp_selectors_no_of_bedrooms{
+                                                        display: block;
+                                                        ul{
+                                                            background-color: white;
+                                                            grid-template-columns: 1fr !important;
+                                                            width: calc(100% - 30px) !important;
+                                                            top: -1px;
+                                                            padding: 15px;
+                                                            li{
+                                                                input[type=checkbox]{
+                                                                    border: 1px solid rgba(21,21,21,.5) !important;
+                                                                    &:checked{
+                                                                        background-color: $site-black !important;
+                                                                        outline: 1px solid $site-black !important;
+                                                                        border: 2px solid white !important;
+                                                                    }
+                                                                }
+                                                                label{
+                                                                    color: $site-black;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &.open{
+                                                        display: block;
+                                                    }
+                                                }
+                                                .seach_attribute_bathrooms{
+                                                    display: none;
+                                                    border-top: 1px solid $site-black;
+                                                    .wpp_search_label{
+                                                        .title{
+                                                            font-family: $opensans-semibold;
+                                                            color: $site-black;
+                                                        }
+                                                        img{
+                                                            display: none;
+                                                        }
+                                                    }
+                                                    .wpp_selectors_bathrooms{
+                                                        display: block;
+                                                        ul{
+                                                            background-color: white;
+                                                            grid-template-columns: 1fr !important;
+                                                            width: calc(100% - 30px) !important;
+                                                            top: -1px;
+                                                            padding: 15px;
+                                                            li{
+                                                                input[type=checkbox]{
+                                                                    border: 1px solid rgba(21,21,21,.5) !important;
+                                                                    &:checked{
+                                                                        background-color: $site-black !important;
+                                                                        outline: 1px solid $site-black !important;
+                                                                        border: 2px solid white !important;
+                                                                    }
+                                                                }
+                                                                label{
+                                                                    color: $site-black;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &.open{
+                                                        display: block;
+                                                    }
+                                                }
+                                                .seach_attribute_listing_amenities{
+                                                    border-top: 1px solid $site-black;
+                                                    display: none;
+                                                    .wpp_search_label{
+                                                        .title{
+                                                            font-family: $opensans-semibold;
+                                                            color: $site-black;
+                                                        }
+                                                        img{
+                                                            display: none;
+                                                        }
+                                                    }
+                                                    .wpp_selectors_listing_amenities{
+                                                        display: block;
+                                                        .listing_amenities{
+                                                            grid-template-columns: 1fr !important;
+                                                            background-color: white;
+                                                            width: calc(100% - 30px) !important;
+                                                            top: -1px;
+                                                            padding: 15px;
+                                                            li{
+                                                                input[type=checkbox]{
+                                                                    border: 1px solid rgba(21,21,21,.5) !important;
+                                                                    &:checked{
+                                                                        background-color: $site-black !important;
+                                                                        outline: 1px solid $site-black !important;
+                                                                        border: 2px solid white !important;
+                                                                    }
+                                                                }
+                                                                label{
+                                                                    color: $site-black;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &.open{
+                                                        display: block;
+                                                    }
+                                                }
+                                                .wpp_search_form_element{
+                                                    position: relative;
+                                                    height: fit-content;
+                                                    margin-bottom: 0px;
+                                                    .wpp_search_label{
+                                                        z-index: 20;
+                                                        margin-bottom: 0px;
+                                                        img{
+                                                            width: fit-content;
+                                                            margin-right: 10px;
+                                                        }
+                                                    }
+                                                    .wpp_search_attribute_wrap{
+                                                        .wpp_multi_checkbox{
+                                                            grid-template-columns: 1fr;
+                                                            width: fit-content;
+                                                        }
+                                                    }
+                                                    .wpp_selectors_locality,.wpp_selectors_property_types{
+                                                        position: absolute;
+                                                        top: 60px;
+                                                        background-color: white;
+                                                        width: 90%;
+                                                        padding: 10px;
+                                                        ul{
+                                                            li{
+                                                                input{
+                                                                    border: 1px solid rgba(21,21,21,.5) !important;
+                                                                    &:checked{
+                                                                        background-color: $site-black !important;
+                                                                        outline: 1px solid $site-black !important;
+                                                                        border: 2px solid white !important;
+                                                                    }
+                                                                }
+                                                                label{
+                                                                    color: $site-black;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .wpp_selectors_locality{
+                                                        width: fit-content;
+                                                        ul{
+                                                            grid-template-columns: 1fr 1fr !important;
+                                                        }
+                                                    }
+                                                    .wpp_selectors_property_types{
+                                                        ul{
+                                                            grid-template-columns: 1fr !important
+                                                        }
+                                                    }
+                                                    .wpp_selectors_price{
+                                                       margin-bottom: 0px;
+                                                       grid-column-gap: 10px;
+                                                    }
+                                                }
+                                                .toggle-additional-filters{
+                                                    display: block;
+                                                    background-color: white;
+                                                    padding: 0px 15px;
+                                                    display: grid;
+                                                    grid-template-columns: 1fr 1fr;
+                                                    align-content: center;
+                                                    cursor: pointer;
+                                                    .filters-title{
+                                                        font-family: $opensans-regular;
+                                                        font-size: 16px;
+                                                    }
+                                                    .filters-icon{
+                                                        justify-self: end;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #content{
+                display: grid;
+                grid-template-columns: 500px auto;
+                grid-template-areas: 'properties map';
+                grid-column-gap: 90px;
+                width: 100%;
+                max-width: 85vw;
+                margin-left: auto;
+                // margin-left: 15%;
+                padding: 0px;
+                .user-account-welcome-screen{
+                    right: 0;
+                    display: none;
+                    top: -193px;
+                    z-index: 55;
+                    &.focus{
+                        display: block;
+                    }
+                }
+                .properties-container{
+                    display: block;
+                    grid-area: map;
+                    // margin-right: calc(15% + 115px);
+                    .desktop-map-container{
+                        position: sticky;
+                        top: 193px;
+                        #ajax-map{
+                            height: calc(100vh - 193px);
+                        }
+                    } 
+                }
+                .wpp_property_overview_shortcode{
+                    grid-area: properties;
+                    width: 100% !important;
+                    padding-top: 30px;
+                    .properties_pagination{
+                        .wpp_pagination_slider_status{
+                            padding-bottom: 20px;
+                            .wpp_property_results_options{
+                                grid-template-columns: 1.5fr 0px 1fr;
+                                .wpp_property_results{
+                                    justify-content: start;
+                                    width: fit-content;
+                                }
+                                .wpp_sorter_options{
+                                    grid-template-columns: 70px auto;
+                                    div{
+                                        width: 150px;
+                                    }
+                                }
+                            }
+                        }
+                        .wpp_pagination_buttons_wrapper{
+                            position: relative;
+                            border: 0px;
+                            background-color: transparent;
+                            ul{
+                                li{
+                                    a{
+                                        &:hover{
+                                            background-color: transparent;
+                                            color: $site-red;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .user-account-container{
+                    top: -193px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and ($xxl-devices){
+    .page-template-properties-template{
+        #page{
+            #content{
+                grid-template-columns: 700px auto;
+            }
+        }
+    }
+}

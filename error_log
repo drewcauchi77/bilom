@@ -1,0 +1,4 @@
+[29-Sep-2020 15:20:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bilomadmin/public_html/wp-content/themes/stevesandco/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bilomadmin/public_html/wp-content/themes/stevesandco/index.php on line 15

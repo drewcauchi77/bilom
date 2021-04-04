@@ -1,0 +1,834 @@
+.single-property{
+    #page{
+        #masthead{
+            padding-bottom: 0px;
+        }
+    }
+}
+.single-property-container{
+    #content{
+        .property{
+            .single-property-gallery-property-images{
+                position: relative;
+                .arrow{
+                    cursor: pointer;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    height: fit-content;
+                    z-index: 10;
+                    padding: 10px 8px;
+                    backdrop-filter: blur(9px);
+                    background-color: rgba(21,21,21,0.5);
+                    img{
+                        display: block;
+                    }
+                }
+                .left-arrow{
+                    left: 0;
+                }
+                .right-arrow{
+                    right: 0;
+                    transform: rotate(180deg);
+                }
+                .slick-list{
+                    .slick-track{
+                        display: flex !important;
+                        .slick-slide{
+                            height: 230px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+            .single-property-content{
+                padding-bottom: 50px;
+                .intro-content{
+                    display: grid;
+                    grid-template-columns: 4fr 1fr;
+                    padding: 30px 0px;
+                    border-bottom: 1px solid rgba(21,21,21,0.5);
+                    margin-bottom: 30px;
+                    .property-price{
+                        .price-text{
+                            margin: 0px;
+                            font-size: 20px;
+                            font-family: $ubuntu-bold;
+                            color: $site-black;
+                            .per-month{
+                                font-family: $ubuntu-light;
+                            }
+                        }
+                    }
+                    .property-wishlist{
+                        justify-self: end;
+                        .simplefavorite-button{
+                            height: 30px;
+                            border: 0;
+                            background-color: white;
+                            cursor: pointer;
+                            img{
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .desktop-enquire{
+                        display: none;
+                    }
+                    .property-status{
+                        .available-tag{
+                            font-size: 12px;
+                            font-family: $opensans-regular;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+                .main-amenities{
+                    display: grid;
+                    grid-template-columns: repeat(5,1fr);
+                    .main-amenity{
+                        display: grid;
+                        grid-template-rows: auto auto;
+                        grid-row-gap: 10px;
+                        .section-icon{
+                            justify-self: center;
+                        }
+                        .section-details{
+                            justify-self: center;
+                            font-family: $opensans-regular;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .property-content{
+                    .property-title{
+                        padding-bottom: 15px;
+                        margin-top: 40px;
+                        .title{
+                            margin: 0px;
+                            font-family: $ubuntu-bold;
+                            font-size: 18px;
+                        }
+                    }
+                    .property-info-text{
+                        .content{
+                            font-family: $opensans-regular;
+                            font-size: 14px;
+                            line-height: 21px;
+                        }
+                    }
+                    .property-files{
+                        padding: 20px 0px;
+                        display: grid;
+                        grid-row-gap: 10px;
+                        .property-file{
+                            display: inline-block;
+                            img{
+                                transition: 0.5s all;
+                            }
+                            .file-name{
+                                padding-right: 10px;
+                                font-family: $opensans-semibold;
+                                font-size: 14px;
+                                color: $site-black;
+                                display: grid;
+                                grid-template-columns: 30px 30px auto;
+                                grid-column-gap: 10px;
+                                a{
+                                    text-decoration: none;
+                                    font-family: $opensans-semibold;
+                                    font-size: 14px;
+                                    color: $site-black;
+                                    height: 30px;
+                                    align-self: center;
+                                    img{
+                                        transition: 0.5s all;
+                                        &:hover{
+                                            transform: scale(1.1);
+                                        }
+                                    }
+                                }
+                                .name{
+                                    align-self: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .unit-amenities{
+                    .unit-amenities-title{
+                        font-family: $ubuntu-bold;
+                        font-size: 20px;
+                    }
+                    .listing-amenities{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 15px;
+                        .amenity{
+                            display: grid;
+                            grid-template-columns: 20px auto;
+                            grid-column-gap: 10px;
+                            align-content: center;
+                            img{
+                                align-self: center;
+                            }
+                            .amenity-title{
+                                font-family: $opensans-regular;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                .enquire-property{
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 70px;
+                    background-color: $site-red;
+                    border: 1px solid $site-red;
+                    z-index: 45;
+                    cursor: pointer;
+                    transition: 0.5s all;
+                    &:hover{
+                        background-color: white;
+                        .enquire-button{
+                            color: $site-red;
+                        }
+                    }
+                    .enquire-button{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        height: fit-content;
+                        text-align: center;
+                        color: white;
+                        font-size: 14px;
+                        font-family: $ubuntu-light;
+                        letter-spacing: 0.7px;
+                    }
+                }
+            }
+            .property-upsells{
+                padding: 50px 0px;
+                background-color: $light-grey;
+                .upsell-listings{
+                    padding-bottom: 50px;
+                    .upsells-listings-title{
+                        font-size: 20px;
+                        font-family: $ubuntu-bold;
+                        margin: 0px;
+                        padding-bottom: 20px;
+                    }
+                    .listing{
+                        padding-bottom: 10px;
+                        a{
+                            text-decoration: none;
+                            font-family: $opensans-regular;
+                            font-size: 14px;
+                            color: $site-black;
+                            img{
+                                transition: 0.5s all;
+                            }
+                            &:hover{
+                                img{
+                                    margin-left: 10px;
+                                }
+                            }
+                            .listing-title{
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+                .similar-listings{
+                    .upsells-title{
+                        font-size: 20px;
+                        font-family: $ubuntu-bold;
+                        margin: 0px;
+                        padding-bottom: 20px;
+                    }
+                    .wpp_property_overview_shortcode{
+                        .properties_pagination{
+                            display: none;
+                        }
+                        .all-properties{
+                            .property_div{
+                                a{
+                                    text-decoration: none;
+                                    color: black;
+                                    .property-details{
+                                        display: grid;
+                                        grid-template-columns: 1fr auto;
+                                        grid-template-areas:
+                                            'title title'
+                                            'price amenities';
+                                        grid-row-gap: 10px;
+                                        background-color: white;
+                                        padding: 15px;
+                                        .property-title{
+                                            grid-area: title;
+                                            h4{
+                                                margin: 0px;
+                                                font-size: 14px;
+                                                font-family: $opensans-semibold;
+                                            }
+                                        }
+                                        .property-price{
+                                            grid-area: price;
+                                            font-size: 20px;
+                                            .price-text{
+                                                margin: 0px;
+                                                font-family: $ubuntu-bold;
+                                                .per-month{
+                                                    font-family: $ubuntu-light;
+                                                }
+                                            }
+                                        }
+                                        .property-main-amenities{
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                            grid-column-gap: 10px;
+                                            grid-area: amenities;
+                                            align-content: center;
+                                            .amenities-section{
+                                                .no-of{
+                                                    font-size: 12px;
+                                                    font-family: $opensans-regular;
+                                                    color: rgba(21,21,21,0.5);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .enquire-form{
+                position: fixed;
+                top: 0;
+                background-color: white;
+                height: 100vh;
+                width: 100vw;
+                z-index: 51;
+                transition: 0.5s all;
+                right: -150vw;
+                overflow: auto;
+                &.open{
+                    right: 0;
+                    @media only screen and ($large-devices){
+                        .enquire-container{
+                            position: fixed;
+                        }
+                    }
+                }
+                .enquire-container{
+                    .enquire-form-header{
+                        padding: 30px 0px;
+                        position: sticky;
+                        top: 0;
+                        background-color: white;
+                        z-index: 52;
+                        .inner-enquire-container{
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            .close-enquire-form-section{
+                                align-self: center;
+                                justify-self: end;
+                                .close-enquire-form-icon{
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    .form-container{
+                        .form-enquire-title{
+                            text-align: center;
+                            margin: 0px;
+                            font-size: 25px;
+                            font-family: $ubuntu-bold;
+                            padding-bottom: 30px;
+                        }
+                        form{
+                            .cf-sect{
+                                padding-right: 30px;
+                                margin-bottom: 20px;
+                                span{
+                                    input, textarea{
+                                        width: 100%;
+                                        border: 1px solid rgba(21,21,21,0.5);
+                                        font-family: $opensans-regular;
+                                        font-size: 14px;
+                                        position: relative;
+                                        &:focus{
+                                            border-color: $site-black;
+                                            &::placeholder{
+                                                color: $site-black;
+                                            }
+                                        }
+                                    }
+                                    input{
+                                        height: 50px;
+                                        padding: 0px 15px;
+                                    }
+                                    textarea{
+                                        padding: 15px;
+                                    }
+                                    .wpcf7-not-valid-tip{
+                                        font-family: $opensans-regular;
+                                        font-size: 10px;
+                                        color: $site-red;
+                                    }
+                                }
+                            }
+                            .terms-accept{
+                                padding: 0px;
+                                margin-bottom: 30px;
+                                .acceptance-field{
+                                    label{
+                                        display: grid;
+                                        grid-template-columns: 30px auto;
+                                        input[type=checkbox]{
+                                            width: 20px !important;
+                                            height: 20px !important;
+                                            -webkit-appearance: none;
+                                            -moz-appearance: none;
+                                            -o-appearance: none;
+                                            appearance:none;
+                                            border: 1px solid rgba(21,21,21,0.5);
+                                            font-size: 2em;
+                                            margin: 0px;
+                                            padding: 0px;
+                                            cursor: pointer;
+                                            &:checked{
+                                                background-color: $site-black;
+                                                outline: 1px solid $site-black;
+                                                border: 2px solid white;
+                                            }
+                                        }
+                                        span{
+                                            font-family: $opensans-regular;
+                                            font-size: 14px;
+                                            a{
+                                                color: $site-black;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .submit-button{
+                                padding-right: 0px;
+                                margin-bottom: 0px;
+                                .wpcf7-submit{
+                                    background-color: $site-red;
+                                    width: 100%;
+                                    height: 50px;
+                                    text-transform: uppercase;
+                                    border: 1px solid $site-red;
+                                    font-family: $ubuntu-medium;
+                                    font-size: 14px;
+                                    color: white;
+                                    letter-spacing: 0.9px;
+                                    transition: 0.5s all;
+                                    cursor: pointer;
+                                    &:hover{
+                                        color: $site-red;
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                            .call-us-button{
+                                margin-top: 30px;
+                                padding-right: 0px;
+                                height: 50px;
+                                width: 100%;
+                                background-color: green;
+                                border: 1px solid green;
+                                transition: 0.5s all;
+                                line-height: 48px;
+                                text-align: center;
+                                text-transform: uppercase;
+                                font-family: $ubuntu-medium;
+                                font-size: 14px;    
+                                a{
+                                    color:white;
+                                    text-decoration: none;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                }
+                                &:hover{
+                                    background-color: transparent;
+                                    a{
+                                        color: green;
+                                    }
+                                }
+                            }
+                            .wpcf7-response-output{
+                                display: none !important;
+                            }
+                        }
+                    }
+                    .company-details{
+                        text-align: center;
+                        font-family: $opensans-regular;
+                        font-size: 14px;
+                        padding: 50px 0px;
+                        line-height: 22px;
+                        .company-address-section{
+                            .company-address{
+                                margin: 0px;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#lightbox{
+    display: grid;
+    grid-template-areas: 'details'
+        'image';
+    grid-row-gap: 10px;
+    .lb-outerContainer{
+        grid-area: image;
+    }
+    .lb-dataContainer{
+        grid-area: details;
+        .lb-number{
+            padding: 8px 0px 0px;
+        }
+    }
+}
+
+@media only screen and ($medium-devices){
+    .single-property-container{
+        #content{
+            .property{
+                .single-property-gallery-property-images{
+                    .slick-list{
+                        .slick-track{
+                            .slick-slide{
+                                height: 450px;
+                            }
+                        }
+                    }
+                }
+                .single-property-content{
+                    display: grid;
+                    grid-template-columns: 4fr 225px;
+                    grid-template-rows: auto minmax(70px,auto) auto;
+                    grid-template-areas:
+                        'intro intro'
+                        'propertytext mainamenities'
+                        'propertytext unitamenities';
+                        grid-column-gap: 40px;
+                    .intro-content{
+                        grid-template-columns: 4fr 50px 175px;
+                        grid-area: intro;
+                        .property-price{
+                            align-self: center;
+                        }
+                        .property-wishlist{
+                            align-self: center;
+                        }
+                        .desktop-enquire{
+                            cursor: pointer;
+                            background-color: $site-red;
+                            display: block !important;
+                            width: 140px;
+                            height: 40px;
+                            color: white;
+                            position: relative;
+                            justify-self: end;
+                            border:1px solid $site-red;
+                            transition: 0.5s all;
+                            &:hover{
+                                background-color: white;
+                                color: $site-red;
+                            }   
+                            .enquire-button{
+                                margin: 0px;
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                                height: fit-content;
+                                text-align: center;
+                                font-size: 14px;
+                                font-family: $ubuntu-medium;
+                                letter-spacing: 0.9px;
+                            }
+                        }
+                    }
+                    .main-amenities{
+                        grid-area: mainamenities;
+                        grid-template-columns: repeat(3,1fr);
+                        grid-row-gap: 20px;
+                    }
+                    .property-content{
+                        grid-area: propertytext;
+                        .property-title{
+                            margin-top: 0px;
+                        }
+                    }
+                    .unit-amenities{
+                        grid-area: unitamenities;
+                    }
+                    .enquire-property{
+                        display: none;
+                    }
+                }
+                .property-upsells{
+                    .similar-listings{
+                        .upsell-properties{
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-column-gap: 20px;
+                            grid-row-gap: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and ($large-devices){
+    .single-property-container{
+        #content{
+            .property{
+                .enquire-form{
+                    background-color: rgba(21,21,21,0.2);
+                    .enquire-container{
+                        background-color: white;
+                        width: 75vw;
+                        height: 75vh;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        overflow: auto;
+                        .enquire-form-header{
+                            padding-bottom: 0px;
+                            .inner-enquire-container{
+                                display: block;
+                                .site-logo-section{
+                                    display: none;
+                                }
+                                .close-enquire-form-section{
+                                    text-align: right;
+                                }
+                            }
+                        }
+                        .form-container{
+                            form{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                grid-column-gap: 20px;
+                                grid-template-areas:
+                                    'subjectfield subjectfield'
+                                    'namefield surnamefield'
+                                    'emailfield telephonefield'
+                                    'messagefield messagefield'
+                                    'termsaccept termsaccept'
+                                    'submitbutton submitbutton';
+                                .subject-section{
+                                    grid-area: subjectfield;
+                                }
+                                .name-section{
+                                    grid-area: namefield;
+                                }
+                                .surname-section{
+                                    grid-area: surnamefield;
+                                }
+                                .email-section{
+                                    grid-area: emailfield;
+                                }
+                                .telephone-section{
+                                    grid-area: telephonefield;
+                                }
+                                .message-section{
+                                    grid-area: messagefield;
+                                    span{
+                                        textarea{
+                                            height: 100px;
+                                        }
+                                    }
+                                }
+                                .terms-accept{
+                                    grid-area: termsaccept;
+                                    .acceptance-field{
+                                        label{
+                                            grid-template-columns: auto auto;
+                                            grid-column-gap: 10px;
+                                            input{
+                                                justify-self: end;
+                                            }
+                                        }
+                                    }
+                                }
+                                .submit-button{
+                                    grid-area: submitbutton;
+                                }
+                                .call-us-button{
+                                    display: none;
+                                }
+                            }
+                        }
+                        .company-details{
+                            .company-address-section{
+                                .company-address{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .single-property{
+        #page{
+            #content{
+                .user-account-container{
+                    top: -131px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and ($xl-devices){
+    .single-property-container{
+        #content{
+            .property{
+                .single-property-gallery-property-images{
+                    .property-image{
+                        &.slick-current{
+                            width: 900px !important;
+                        }
+                        &:not(.slick-current){
+                            height: 350px !important;
+                            padding-top: 50px;
+                        }
+                    }
+                    .slick-dots{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        height: fit-content;
+                        text-align: center;
+                        padding-bottom: 20px;
+                        li{
+                            display: inline-block;
+                            padding: 0px 10px;
+                            .slick-dot{
+                                cursor: pointer;
+                            }
+                            &:only-child{
+                                display: none;
+                            }
+                            &:not(.slick-active){
+                                opacity: 0.35;
+                            }
+                        }
+                    }
+                }
+                .single-property-content{
+                    grid-template-columns: 4fr 350px;
+                    grid-column-gap: 150px;
+                    padding: 50px 0px;
+                    .intro-content{
+                        grid-template-columns: 4fr 150px 200px;
+                    }
+                    .main-amenities{
+                        grid-template-columns: repeat(5,1fr);
+                    }
+                }
+                .property-upsells{
+                    padding: 50px 0px;
+                    .upsell-container{
+                        display: grid;
+                        grid-template-columns: 1fr 3fr;
+                        grid-column-gap: 40px;
+                        .similar-listings{
+                            .upsells-title{
+                                display: none;
+                            }
+                        }
+                        .upsell-properties{
+                            grid-template-columns: repeat(3,1fr);
+                            .all-properties{
+                                .property_div{
+                                    padding: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .enquire-container{
+                    height: 80vh !important;
+                    width: 65vw !important;
+                    .form-container{
+                        form{
+                            width: 65%;
+                            margin: 0 auto;
+                        }
+                    }
+                    .company-details{
+                        padding-bottom: 0px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.simplefavorites-modal-backdrop{
+    width: 0 !important;
+    height: 0 !important;
+}
+.simplefavorites-modal-content{
+    width: 100vw;
+    height: 50px;
+    margin-top: 50px;
+    background-color: $site-red;
+    color: white;
+    font-family: $opensans-regular;
+    .simplefavorites-modal-content-body{
+        display: grid;
+        grid-template-columns: 250px 50px;
+        justify-content: center;
+        text-align: center;
+        padding: 0px;
+        &:before{
+            display: none;
+        }
+        p{
+            a{
+                color: white;
+            }
+        }
+    }
+}

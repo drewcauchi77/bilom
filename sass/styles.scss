@@ -1,0 +1,19 @@
+// npm install -g sass
+// sass --watch sass/styles.scss:css/styles.css --style compressed
+
+@import "fonts";
+@import "main";
+@import "header";
+@import "footer";
+@import "home";
+@import "contact-us";
+@import "policies";
+@import "single-property";
+@import "properties";
+@import "login";
+@import "register";
+@import "forgotpassword";
+@import "dashboard";
+@import "userwelcomescreen";
+@import "favourites";
+@import "404";

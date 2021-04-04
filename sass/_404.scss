@@ -1,0 +1,50 @@
+.error404{
+    #page{
+        #content{
+            #primary{
+                #main{
+                    .error-404{
+                        padding: 40px 0px;
+                        .content-404{
+                            height: 350px;
+                            margin: 0 auto;
+                            text-align: center;
+                            display: grid;
+                            grid-template-rows: 80px 80px 190px;
+                            .main-text-404{
+                                align-self: center;
+                                font-family: $ubuntu-bold;
+                                font-size: 30px;
+                                .red-text{
+                                    color: $site-red;
+                                }
+                            }
+                            .tagline-404{
+                                align-self: center;
+                                font-family: $ubuntu-bold;
+                                font-size: 24px;
+                            }
+                            .return-to-home-404{
+                                align-self: center;
+                                font-family: $ubuntu-bold;
+                                width: 250px;
+                                height: 50px;
+                                background-color: $site-red;
+                                margin: 0 auto;
+                                line-height: 48px;
+                                color: white;
+                                border: 1px solid $site-red;
+                                text-decoration: none;
+                                transition: 0.5s all;
+                                &:hover{
+                                    background-color: transparent;
+                                    color: $site-red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}

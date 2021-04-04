@@ -1,0 +1,869 @@
+.home{
+    #page{
+        .site-header{
+            background-color: #ededed;
+        }
+        .site-content{
+            background-color: #ededed;
+            .home-container{
+                //Search
+                .home-property-search{
+                    padding: 40px 0px;
+                    .desktop-container{
+                        display: none;
+                    }
+                    .desktop-only-container{
+                        width:100%;
+                        .rent-sale-select{
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            text-align: center;
+                            .selection-button{
+                                color: $site-black;
+                                opacity: 0.5;
+                                font-family: $opensans-semibold;
+                                font-family: 18px;
+                                width: fit-content;
+                                height: 25px;
+                                justify-self: center;
+                                cursor: pointer;
+                                &:hover{
+                                    border-bottom: 2px solid rgba(213,31,61,0.5);
+                                }
+                                &.active{
+                                    color: $site-black;
+                                    opacity: 1;
+                                    border-bottom: 2px solid $site-red;
+                                }
+                            }
+                        }
+                        .rent-sale-title-tagline{
+                            .title-tagline-section{
+                                padding: 40px 0px 10px;
+                                display: none;
+                                text-align: center;
+                                .title{
+                                    font-family: $ubuntu-bold;
+                                    font-size: 20px;
+                                    padding-bottom: 20px;
+                                }
+                                .tagline{
+                                    font-family: $opensans-regular;
+                                    font-size: 14px;
+                                }
+                                &.visible{
+                                    display: block;
+                                }
+                            }
+                        }
+                        #searchpropertieswidget-4{
+                            .wpp_search_properties_widget{
+                                form{
+                                    .wpp_search_elements{
+                                        padding: 0px;
+                                        .wpp_search_group{
+                                            ul{
+                                                padding: 0px;
+                                                list-style: none;
+                                                .wpp_search_form_element{
+                                                    list-style: none;
+                                                    margin: 0px;
+                                                    .wpp_search_label{
+                                                        position: relative;
+                                                        width: 100%;
+                                                        height: 50px;
+                                                        background-color: white;
+                                                        color: rgba(0,0,0,0.5);
+                                                        font-family: $opensans-regular;
+                                                        font-size: 16px;
+                                                        line-height: 48px;
+                                                        margin-bottom: 20px;
+                                                        width: calc(100% - 30px);
+                                                        padding: 0 15px;
+                                                        .title{
+                                                            overflow-x: auto;
+                                                            display: block;
+                                                            padding-right: 40px;
+                                                            height: 50px;
+                                                        }
+                                                        img{
+                                                            background-color: white;
+                                                            position: absolute;
+                                                            top: 0;
+                                                            bottom: 0;
+                                                            right: 0;
+                                                            margin: auto;
+                                                            height: fit-content;
+                                                        }
+                                                    }
+                                                }
+                                                .seach_attribute_rent_or_buy{
+                                                    // Hidden due to above Rent/Buy selectors at the top
+                                                    display:none;
+                                                }
+                                                .seach_attribute_locality{
+                                                    label{
+                                                        cursor: pointer;
+                                                    }
+                                                    // Temporary hidden options 
+                                                    .wpp_search_attribute_wrap{
+                                                        position: fixed;
+                                                        top: 0;
+                                                        background-color: white;
+                                                        height: 100vh;
+                                                        width: 100vw;
+                                                        z-index: 51;
+                                                        transition: 0.5s all;
+                                                        right: -150vw;
+                                                        overflow: auto;
+                                                        background-color: $light-grey;
+                                                        &.visible{
+                                                            right: 0;
+                                                        }
+                                                        input[type=checkbox]{
+                                                            width: 20px !important;
+                                                            height: 20px !important;
+                                                            -webkit-appearance: none;
+                                                            -moz-appearance: none;
+                                                            -o-appearance: none;
+                                                            appearance:none;
+                                                            border: 1px solid rgba(21,21,21,0.5);
+                                                            font-size: 2em;
+                                                            margin: 0px;
+                                                            padding: 0px;
+                                                            cursor: pointer;
+                                                            &:checked{
+                                                                background-color: $site-black;
+                                                                outline: 1px solid $site-black;
+                                                                border: 2px solid white;
+                                                            }
+                                                        }
+                                                        .mobile-header{
+                                                            padding-top: 30px;
+                                                            padding-bottom: 60px;
+                                                            position: sticky;
+                                                            top:0;
+                                                            background-color: $light-grey;
+                                                            .site-logo{
+                                                                float: left;
+                                                            }
+                                                            .clear-desktop-filters{
+                                                                display: none;
+                                                            }
+                                                            .close-desktop-section{
+                                                                float: right;
+                                                                cursor: pointer;
+                                                                display: none;
+                                                            }
+                                                            .close-section{
+                                                                float: right;
+                                                                cursor: pointer;
+                                                            }
+                                                        }
+                                                        .locality-top-title{
+                                                            padding-top: 30px;
+                                                            display: grid;
+                                                            grid-template-columns: auto 80px;
+                                                            .title{
+                                                                background-color: white;
+                                                                margin: 0px;
+                                                                height: 50px;
+                                                                line-height: 48px;
+                                                                font-size: 16px;
+                                                                padding-left: 15px;
+                                                                font-family: $opensans-regular;
+                                                                font-size: 16px;
+                                                                color: rgba(21,21,21,0.5);
+                                                                overflow-x: auto;
+                                                            }
+                                                            .apply-filters{
+                                                                background-color: $dark-grey;
+                                                                text-align: center;
+                                                                line-height: 48px;
+                                                                text-transform: uppercase;
+                                                                color: white;
+                                                                font-family: $ubuntu-medium;
+                                                                font-size: 14px;
+                                                                cursor: pointer;
+                                                            }
+                                                        }
+                                                        .area-selectors{
+                                                            margin-top: 10px;
+                                                            background-color: white;
+                                                            display: grid;
+                                                            grid-template-columns: repeat(4,1fr);
+                                                            text-align: center;
+                                                            font-size: 14px;
+                                                            font-family: $opensans-semibold;
+                                                            color: rgba(21,21,21,0.5);
+                                                            .area{
+                                                                height: 50px;
+                                                                display: inline-block;
+                                                                align-self: center;
+                                                                line-height: 48px;
+                                                                cursor: pointer;
+                                                                &.enabled{
+                                                                    color: white;
+                                                                    background-color: $site-red;
+                                                                }
+                                                            }
+                                                        }
+                                                        .localities{
+                                                            background-color: white;
+                                                            padding: 50px 0px;
+                                                            margin-bottom: 30px;
+                                                            section{
+                                                                display: none;
+                                                                &.visible{
+                                                                    display: block;
+                                                                }
+                                                                .select-area{
+                                                                    display: grid;
+                                                                    grid-template-columns: auto 1fr;
+                                                                    padding-bottom: 20px;
+                                                                    margin-left: 40px;
+                                                                    grid-column-gap: 20px;
+                                                                    label{
+                                                                        font-size: 14px;
+                                                                        font-family: $opensans-regular;
+                                                                        color: $site-black;
+                                                                    }
+                                                                }
+                                                                ul{
+                                                                    li{
+                                                                        display: grid;
+                                                                        grid-template-columns: auto 1fr;
+                                                                        grid-column-gap: 20px;
+                                                                        margin-left: 50px;
+                                                                        label{
+                                                                            font-size: 14px;
+                                                                            font-family: $opensans-regular;
+                                                                            color: rgba(21,21,21,0.5);
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        ul.locality{
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                                .seach_attribute_price{
+                                                    // Hide label title
+                                                    margin-bottom: 20px;
+                                                    label{
+                                                        display: none;
+                                                    }
+                                                    .wpp_search_attribute_wrap{
+                                                        display:grid;
+                                                        grid-template-columns: 1fr 1fr;
+                                                        grid-column-gap: 15px;
+                                                        input{
+                                                            height: 50px;
+                                                            width: calc(100% - 30px);
+                                                            padding: 0 15px;
+                                                            border: none;
+                                                            font-family: $opensans-regular;
+                                                            font-size: 16px;
+                                                            &::placeholder{
+                                                                color: rgba(0,0,0,0.5);
+                                                                font-family: $opensans-regular;
+                                                                font-size: 16px;
+                                                            }
+                                                        }
+                                                        .wpp_dash{
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                                .seach_attribute_property_types{
+                                                    label{
+                                                        cursor: pointer;
+                                                    }
+                                                    // Temporary hidden options
+                                                    .wpp_selectors_property_types{
+                                                        position: fixed;
+                                                        top: 0;
+                                                        background-color: white;
+                                                        height: 100vh;
+                                                        width: 100vw;
+                                                        z-index: 51;
+                                                        transition: 0.5s all;
+                                                        right: -150vw;
+                                                        overflow: auto;
+                                                        background-color: $light-grey;
+                                                        &.visible{
+                                                            right: 0;
+                                                        }
+                                                        input[type=checkbox]{
+                                                            width: 20px !important;
+                                                            height: 20px !important;
+                                                            -webkit-appearance: none;
+                                                            -moz-appearance: none;
+                                                            -o-appearance: none;
+                                                            appearance:none;
+                                                            border: 1px solid rgba(21,21,21,0.5);
+                                                            font-size: 2em;
+                                                            margin: 0px;
+                                                            padding: 0px;
+                                                            cursor: pointer;
+                                                            &:checked{
+                                                                background-color: $site-black;
+                                                                outline: 1px solid $site-black;
+                                                                border: 2px solid white;
+                                                            }
+                                                        }
+                                                        .mobile-header{
+                                                            padding-top: 30px;
+                                                            padding-bottom: 60px;
+                                                            position: sticky;
+                                                            top:0;
+                                                            background-color: $light-grey;
+                                                            .clear-desktop-filters{
+                                                                display: none;
+                                                            }
+                                                            .close-desktop-section{
+                                                                float: right;
+                                                                cursor: pointer;
+                                                                display: none;
+                                                            }
+                                                            .site-logo{
+                                                                float: left;
+                                                            }
+                                                            img{
+                                                                float: right;
+                                                                cursor: pointer;
+                                                            }
+                                                        }
+                                                        .property_types-top-title{
+                                                            padding-top: 30px;
+                                                            display: grid;
+                                                            grid-template-columns: auto 80px;
+                                                            .title{
+                                                                background-color: white;
+                                                                margin: 0px;
+                                                                height: 50px;
+                                                                line-height: 48px;
+                                                                font-size: 16px;
+                                                                padding-left: 15px;
+                                                                font-family: $opensans-regular;
+                                                                font-size: 16px;
+                                                                color: rgba(21,21,21,0.5);
+                                                                overflow-x: auto;
+                                                            }
+                                                            .apply-filters{
+                                                                background-color: $dark-grey;
+                                                                text-align: center;
+                                                                line-height: 48px;
+                                                                text-transform: uppercase;
+                                                                color: white;
+                                                                font-family: $ubuntu-medium;
+                                                                font-size: 14px;
+                                                                cursor: pointer;
+                                                            }
+                                                        }
+                                                        .select-all-container{
+                                                            background-color: white;
+                                                            margin-top: 10px;
+                                                            padding-top: 50px;
+                                                            display: grid;
+                                                            grid-template-columns: auto 1fr;
+                                                            grid-column-gap: 20px;
+                                                            padding-bottom: 20px;
+                                                            input{
+                                                                margin-left: 40px;
+                                                            }
+                                                            label{
+                                                                font-family: $opensans-regular;
+                                                                font-size: 14px;
+                                                                color: $site-black;
+                                                            }
+                                                        }
+                                                        ul{
+                                                            width: 85%;
+                                                            margin: 0 auto;
+                                                            max-width: 1364px;
+                                                            background-color: white;
+                                                            padding-bottom: 50px;
+                                                            margin-bottom: 30px;
+                                                            li{
+                                                                display: grid;
+                                                                grid-template-columns: auto 1fr;
+                                                                grid-column-gap: 20px;
+                                                                margin-left: 50px;
+                                                                label{
+                                                                    width: 100%;
+                                                                    font-family: $opensans-regular;
+                                                                    font-size: 14px;
+                                                                    color: rgba(21,21,21,0.5);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            
+                                        }
+                                        .submit{
+                                            background-color: $site-red;
+                                            border: 1px solid $site-red;
+                                            height: 50px;
+                                            width: 100%;
+                                            color: white;
+                                            text-transform: uppercase;
+                                            font-family: $ubuntu-medium;
+                                            font-size: 14px;
+                                            letter-spacing: 0.7px;
+                                            cursor: pointer;
+                                            transition: 0.5s all;
+                                            &:hover{
+                                                background-color: transparent;
+                                                color: $site-red; 
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //Listings
+                .home-listings{
+                    padding: 50px 0px;
+                    .main-listings-title{
+                        text-align: center;
+                        font-size: 20px;
+                        font-family: $ubuntu-bold;
+                        padding-bottom: 10px;
+                    }
+                    .listing{
+                        .listing-title{
+                            text-align: center;
+                            font-size: 16px;
+                            font-family: $opensans-semibold;
+                            padding-bottom: 20px;
+                        }
+                        .property-list{
+                            padding-bottom: 40px;
+                            .properties_pagination{
+                                display: none;
+                            }
+
+                            .all-properties{
+                                .property{
+                                    margin-bottom: 30px;
+                                    padding: 0px;
+                                   .wpp_overview_left_column{
+                                       width: 100%;
+                                       .home-gallery-property-images{
+                                           position: relative;
+                                           .arrow{
+                                               cursor: pointer;
+                                               position: absolute;
+                                               top: 0;
+                                               bottom: 0;
+                                               margin: auto;
+                                               height: fit-content;
+                                               z-index: 10;
+                                               padding: 10px 8px;
+                                               backdrop-filter: blur(9px);
+                                               background-color: rgba(21,21,21,0.5);
+                                               img{
+                                                   display: block;
+                                               }
+                                           }
+                                           .left-arrow{
+                                               left: 0;
+                                           }
+                                           .right-arrow{
+                                               right: 0;
+                                               transform: rotate(180deg);
+                                           }
+                                           .slick-list{
+                                               .slick-track{
+                                                   display: flex !important;
+                                                   height: 200px;
+                                                   .slick-slide{
+                                                       height: inherit !important;
+                                                       a{
+                                                            img{
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                object-fit: cover;
+                                                            }
+                                                        }
+                                                   }
+                                               }
+                                           }
+                                       }
+                                   }
+                                   .wpp_overview_right_column{
+                                       background-color: white;
+                                       padding: 20px 15px;
+                                       .wpp_overview_data{
+                                           .property-information{
+                                               position: relative;
+                                               a{
+                                                   text-decoration: none;
+                                                   color: $site-black;
+                                                   .property-details{
+                                                        display: grid;
+                                                        grid-template-columns: repeat(2,1fr);
+                                                        grid-template-areas: 
+                                                            'location location'
+                                                            'price amenities';
+                                                        grid-row-gap: 20px;
+                                                        .property-location{
+                                                            grid-area: location;
+                                                            .location-text{
+                                                                margin: 0px;
+                                                                font-size: 12px;
+                                                                font-family: $opensans-semibold;
+                                                            }
+                                                        }
+                                                        .property-price{
+                                                            grid-area: price;
+                                                            .price-text{
+                                                                margin: 0px;
+                                                                font-size: 18px;
+                                                                font-family: $ubuntu-bold;
+                                                                .per-month{
+                                                                    font-family: $ubuntu-light;
+                                                                }
+                                                            }
+                                                        }
+                                                        .property-main-amenities{
+                                                            grid-area: amenities;
+                                                            display: grid;
+                                                            grid-template-columns: auto auto;
+                                                            justify-content: end;
+                                                            align-content: center;
+                                                            grid-column-gap: 10px;
+                                                            .amenities-section{
+                                                                img{
+                                                                    height:100%;
+                                                                }
+                                                                .no-of{
+                                                                    font-size: 14px;
+                                                                    font-family: $opensans-regular;
+                                                                    opacity: 0.5;
+                                                                }
+                                                            }
+                                                        }
+                                                   }
+                                               }
+                                               .add-to-wishlist{
+                                                   position: absolute;
+                                                   top: 0;
+                                                   right: 0;
+                                                   margin: auto;
+                                               }
+                                           }
+                                       }
+                                   } 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .user-account-welcome-screen, .user-account-dashboard, .user-account-container{
+                background-color: $light-grey;
+            }
+        }
+    }
+}
+
+@media only screen and ($medium-devices){
+    .home{
+        #page{
+            .site-content{
+                .home-container{
+                    .home-listings{
+                        .listing{
+                            .property-list{
+                                .listings{
+                                    .wpp_property_overview_shortcode{
+                                        width: 32%;
+                                        display: inline-block;
+                                        &:not(:last-child){
+                                            margin-right: 2%;
+                                        }
+                                    }
+                                }
+                                .load-more-button{
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and ($large-devices){
+    .home{
+        #page{
+            #masthead{
+                position: absolute;
+                width: 100%;
+                background-color: transparent;
+                z-index: 40;
+                filter: invert(1);
+                .child-menu{
+                    filter: invert(1);
+                }
+            }
+            .site-content{
+                .home-container{
+                    .home-property-search{
+                        padding-top: 0px;
+                        position: relative;
+                        .desktop-container{
+                            display: block;
+                            position: relative;
+                            .background-image{
+                                height: 100vh;
+                                max-height: 1080px;
+                                width: 100%;
+                            }
+                            .image-overlay{
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                margin: auto;
+                                height: 100%;
+                                width: 100%;
+                                background-color: rgba(0,0,0,0.4);
+                            }
+                        }
+                        .desktop-only-container{
+                            width: 85%;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            .search-container{
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                margin: auto;
+                                height: fit-content;
+                                background-color: $light-grey;
+                                max-width: 400px;
+                                padding: 30px;
+                                max-height: 470px;
+                                .wpp_search_properties_widget{
+                                    form{
+                                        .seach_attribute_locality{
+                                            .wpp_selectors_locality{
+                                                display: none;
+                                                left: 500px;
+                                                width: fit-content !important;
+                                                min-width: 70%;
+                                                height: 630px !important;
+                                                position: absolute !important;
+                                                top: 0 !important;
+                                                .localities{
+                                                    .list-of-localities{
+                                                        ul{
+                                                            li{
+                                                                label{
+                                                                    width: 100%;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &.visible{
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                        .seach_attribute_property_types{
+                                            .wpp_selectors_property_types{
+                                                display: none;
+                                                right: -150vw;
+                                                left: 500px;
+                                                width: fit-content !important;
+                                                min-width: 70%;
+                                                height: 630px !important;
+                                                position: absolute !important;
+                                                top: 0 !important;
+                                                &.visible{
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .home-listings{
+                        .listing{
+                            .property-list{
+                                .all-properties{
+                                    grid-template-columns: repeat(3,minmax(150px,1fr));
+                                    grid-template-areas: 'firstprop secondprop thirdprop';
+                                }
+                            }
+                        }
+                    }
+                }
+                .user-account-welcome-screen,.user-account-dashboard,.register-form-container,.reset-password-form-container,.login-form-container, .favourites-list{
+                    top: 0;
+                }
+                .user-account-welcome-screen, .user-account-dashboard{
+                    background-color: white;
+                }
+                .user-account-container{
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and ($xl-devices){
+    .home{
+        #page{
+            .site-content{
+                .home-container{
+                    .home-property-search{
+                        .desktop-only-container{
+                            .search-container{
+                                .wpp_search_properties_widget{
+                                    form{
+                                        .wpp_search_elements{
+                                            .wpp_search_form_element{
+                                                .mobile-header{
+                                                    // display: none;
+                                                    padding-top: 30px !important;
+                                                    padding-bottom: 0px !important;
+                                                    background-color: white !important;
+                                                    height: 40px;
+                                                    width: 100%;
+                                                    .site-logo{
+                                                        display: none;
+                                                    }
+                                                    .close-desktop-section{
+                                                        display: block !important;
+                                                        position: absolute;
+                                                        top: 0;
+                                                        bottom: 0;
+                                                        right: 50px;
+                                                        margin: auto;
+                                                        cursor: pointer;
+                                                    }
+                                                    .clear-desktop-filters{
+                                                        display: block !important;
+                                                        width: fit-content;
+                                                        margin: 0px;
+                                                        padding-left: 50px;
+                                                        text-decoration: underline;
+                                                        font-family: $opensans-regular;
+                                                        font-size: 14px;
+                                                        color: #151515;
+                                                        cursor: pointer;
+                                                    }
+                                                    .close-section{
+                                                        display: none;
+                                                    }
+                                                }
+                                                .wpp_selectors_property_types{
+                                                    min-width: 100%;
+                                                    background-color: transparent !important;
+                                                    height: fit-content !important;
+                                                    .property_types-top-title{
+                                                        display: none !important;
+                                                    }
+                                                    .select-all-container{
+                                                        margin-top: -1px !important;
+                                                        margin-left: 0px;
+                                                        width: 100%;
+                                                        padding: 30px 0px 20px !important;
+                                                        input{
+                                                            margin-left: 50px !important;
+                                                        }
+                                                    }
+                                                    ul{
+                                                        margin-left: 0px !important;
+                                                        margin-top: -1px !important;
+                                                        width: 100% !important;
+                                                        margin-bottom: 0px !important;
+                                                        display: grid;
+                                                        grid-template-columns: 1fr 1fr;
+                                                    }
+                                                }
+                                                .wpp_selectors_locality{
+                                                    min-width: 100%;
+                                                    background-color: transparent !important;
+                                                    height: fit-content !important;
+                                                    .locality-top-title{
+                                                        display: none !important;
+                                                    }
+                                                    .area-selectors{
+                                                        display: none !important;
+                                                    }
+                                                    .localities{
+                                                        margin-left: 0px !important;
+                                                        margin-bottom: 0px !important;
+                                                        display: grid;
+                                                        grid-template-columns: 1fr 1fr;
+                                                        grid-row-gap: 30px;
+                                                        width: 100% !important;
+                                                        overflow-x: hidden;
+                                                        padding: 30px 0px 50px !important;
+                                                        margin-top: -1px;
+                                                        .list-of-localities{
+                                                            display: block !important;
+                                                            .select-area{
+                                                                margin-left: 50px !important;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .home-listings{
+                        .listing{
+                            .property-list{
+                                .listings{
+                                    .wpp_property_overview_shortcode{
+                                        .all-properties{
+                                            .property{
+                                                .wpp_overview_left_column{
+                                                    .gallery-property-images{
+                                                        .slick-list{
+                                                            .slick-track{
+                                                                height: 230px;
+                                                            }
+                                                        }
+                                                    }  
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

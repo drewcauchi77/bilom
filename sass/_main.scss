@@ -1,0 +1,66 @@
+body{
+    margin: 0px;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1364px;
+}
+
+a, a img{
+    outline: none;
+}
+
+*:focus{
+    outline: none;
+}
+
+#page{
+    position: relative;
+    overflow-x: hidden;
+}
+
+$dark-grey: #414851;
+$site-black: #151515;
+$site-red: #D51F3D;
+$light-grey: #ededed;
+
+$medium-devices: "min-width: 768px";
+$large-devices: "min-width: 992px";
+$xl-devices: "min-width: 1200px";
+$xxl-devices: "min-width: 1468px";
+
+.load-more-button{
+    width: 270px;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: $dark-grey;
+    text-transform: uppercase;
+    font-family: $ubuntu-medium;
+    font-size: 14px;
+    letter-spacing: 0.9px;
+    border: 1px solid $dark-grey;
+    cursor: pointer;
+    transition: 0.5s all;
+    &:hover{
+        background-color: transparent;
+        a{
+            color: $dark-grey;
+        }
+    }
+    a{
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+}
+
+.gm-svpc{
+    display: none;
+}

@@ -1,0 +1,257 @@
+.user-account-container{
+    .container{
+        .header-close-container{
+            display: none;
+        }
+    }
+}
+
+.login-form-container{
+    position: absolute;
+    background: white;
+    height: calc(100vh - 92px);
+    width: 100vw;
+    top: 92px;
+    transition: .5s all;
+    right: -100vw;
+    z-index: 51;
+    overflow: auto;
+    .container{
+        form{
+            .login-form{
+                .login-form-title{
+                    text-align: center;
+                    font-size: 25px;
+                    font-family: $ubuntu-bold;
+                    margin-bottom: 30px;
+                }
+                .form-section{
+                    margin-bottom: 20px;
+                    .form-control{
+                        width: calc(100% - 30px);
+                        border: 1px solid rgba(21,21,21,0.5);
+                        font-family: $opensans-regular;
+                        font-size: 14px;
+                        height: 50px;
+                        padding: 0px 15px;
+                        &:focus{
+                            border-color: $site-black;
+                            &::placeholder{
+                                color: $site-black;
+                            }
+                        }
+                    }
+                }
+                .remember-me-section{
+                    text-align: center;
+                    margin-bottom: 20px;
+                    input[type=checkbox]{
+                        width: 15px !important;
+                        height: 15px !important;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -o-appearance: none;
+                        appearance:none;
+                        border: 1px solid rgba(21,21,21,0.5);
+                        font-size: 2em;
+                        margin: 0px;
+                        padding: 0px;
+                        cursor: pointer;
+                        &:checked{
+                            background-color: $site-black;
+                            outline: 1px solid $site-black;
+                            border: 2px solid white;
+                        }
+                    }
+                    .css-label{
+                        font-size: 16px;
+                    	font-family: $opensans-regular;
+                    }
+                }
+                input[type=submit]{
+                    height: 50px;
+                    width: 100%;
+                    border: 1px solid $site-red;
+                    background-color: $site-red;
+                    text-transform: uppercase;
+                    color: white;
+                    font-family: $ubuntu-medium;
+                    font-size: 14px;
+                    transition: 0.5s all;
+                    cursor: pointer;
+                    margin-bottom: 50px;
+                    &:hover{
+                        background-color: transparent;
+                        color: $site-red;
+                    }
+                }
+                .facebook-button{
+                    height: 50px;
+                    width: 150px;
+                    text-align: center;
+                    line-height: 48px;
+                    background-color: $dark-grey;
+                    margin: 0 auto;
+                    color: white;
+                    font-family: $ubuntu-medium;
+                    font-size: 14px;
+                    a{
+                        display: grid;
+                        grid-template-columns: 30px auto;
+                        grid-column-gap: 5px;
+                        text-decoration: none;
+                        img{
+                            justify-self: end;
+                            align-self: center;
+                        }
+                        .f-button-text{
+                            color: white;
+                        }
+                    }
+                }
+                .facebook-login{
+                    margin-bottom: 30px;
+                    .f-login-text{
+                        text-align: center;
+                        font-size: 16px;
+                        font-family: $opensans-regular;
+                        margin-bottom: 30px;
+                        &:before, &:after{
+                            background-color: #000;
+                            content: "";
+                            display: inline-block;
+                            height: 1px;
+                            position: relative;
+                            vertical-align: middle;
+                            width: 30%;
+                        }
+                        &:before{
+                            right: 0.7em;
+                            margin-left: -50%;
+                        }
+                        &:after{
+                            left: 0.7em;
+                            margin-right: -50%;
+                        }
+                    }
+                    .facebook-button{
+                        height: 50px;
+                        width: 150px;
+                        text-align: center;
+                        line-height: 48px;
+                        background-color: $dark-grey;
+                        margin: 0 auto;
+                        color: white;
+                        font-family: $ubuntu-medium;
+                        font-size: 14px;
+                        a{
+                            display: grid;
+                            grid-template-columns: 30px auto;
+                            grid-column-gap: 5px;
+                            text-decoration: none;
+                            img{
+                                justify-self: end;
+                                align-self: center;
+                            }
+                            .f-button-text{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .register-now-section{
+                    font-family: $opensans-regular;
+                    font-size: 14px;
+                    text-align: center;
+                    .register-text{
+                        margin: 0px;
+                        .register-button{
+                            font-family: $opensans-bold;
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .forgot-password-section{
+                    font-family: $opensans-bold;
+                    font-size: 14px;
+                    text-align: center;
+                    cursor: pointer;
+                    padding-bottom: 30px;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &.focus{
+        right: 0;
+    }
+}
+
+@media only screen and ($large-devices){
+    .user-account-container{
+        .container{
+            .header-close-container{
+                display: block;
+            }
+        }
+    }
+    .site-content{
+        position: relative;
+        .user-account-container{
+            position: absolute;
+            top: -101px;
+            bottom: 0;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.8) !important;
+            z-index:53;
+            .container{
+                background-color: white;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                height: fit-content;
+                max-width: 700px;
+                .header-close-container{
+                    width: 85%;
+                    margin: 0 auto;
+                    padding-top: 50px;
+                    .close-user-window{
+                        float: right;
+                        cursor: pointer;
+                    }
+                }
+                form{
+                    width: 70%;
+                    margin: 0 auto;
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+    .login-form-container{
+        right: 0px;
+        display: none;
+        &.focus{
+            display: block;
+        }
+    }
+}
+
+.profilepress-login-status, .profilepress-reset-status, .profilepress-reg-status, .account-settings-errors{
+    padding: 20px 10% !important;
+    margin-top: 20px !important;
+    font-family: $opensans-regular;
+    font-size: 14px !important;
+    text-align: center;
+    background-color: $site-red !important;
+    color: white !important;
+    border-radius: 0px !important;
+    text-transform: capitalize;
+    @media only screen and ($large-devices){
+        filter: invert(1);
+    }
+}

@@ -1,0 +1,96 @@
+.policies-container{
+    margin-bottom: 50px;
+    color: $site-black;
+    .page-title{
+        text-align: center;
+        font-family: $ubuntu-bold;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .page-content{
+        font-family: $opensans-regular;
+        font-size: 15px;
+        text-align: left;
+        p{
+            line-height: 22px;
+        }
+        h2, h3, h4, h5, h6{
+            font-family: $ubuntu-bold;
+            text-align: center;
+            margin-top: 25px;
+        }
+        ul, ol{
+            padding-left: 20px;
+            font-size: 14px;
+            li{
+                padding-bottom: 10px;
+            }
+        }
+    }
+    a{
+        color: $site-black;
+        cursor: pointer;
+    }
+}
+
+#cookie-law-info-bar{
+    width: 98%;
+    margin: 0 1% 1%;
+    span{
+        font-family: $opensans-regular;
+        font-size: 12px;
+        .cli_settings_button{
+            color: $site-red !important;
+            text-decoration: underline;
+        }
+        .medium{
+            width: 200px;
+            background-color: $site-red !important;
+            border: 1px solid $site-red;
+            transition: 0.5s all;
+            &:hover{
+                background-color: transparent !important;
+                color: $site-red !important;
+            }
+        }
+    }
+}
+
+#cookie-law-info-again{
+    display: none !important;
+}
+
+.cli-modal{
+    .cli-modal-dialog{
+        .cli-modal-content{
+            font-family: $opensans-regular;
+        }
+    }
+}
+
+@media only screen and ($medium-devices){
+    .policies-container{
+        padding-top: 90px;
+        .page-title{
+            text-align: left;
+        }
+        .page-content{
+            h2, h3, h4, h5, h6{
+                margin-top: 40px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media only screen and ($large-devices){
+    .page-template-policies-template{
+        #page{
+            #content{
+                .user-account-welcome-screen, .user-account-dashboard, .favourites-list{
+                    top: -101px;
+                }
+            }
+        }
+    }
+}

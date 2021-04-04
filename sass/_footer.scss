@@ -1,0 +1,108 @@
+.site-footer{
+    background-color: $dark-grey;
+    position: relative;
+    z-index: 46;
+    .footer-container{
+        padding: 80px 0px;
+        .footer-social-media-section{
+            justify-content: center;
+            justify-items: center;
+            padding-bottom: 20px;
+            border-bottom: 0.5px solid white;
+            .social-link{
+                .social-icon{
+                    transition: 0.5s all;
+                }
+                &:hover{
+                    .social-icon{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        .footer-navigation-section{
+            padding: 10px 0px;
+            border-bottom: 0.5px solid white;
+            .footer-nav-column{
+                text-align: center;
+                .footer-nav-link{
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: white;
+                    margin: 10px 0px;
+                    display: inline-block;
+                    font-family: $opensans-regular;
+                    font-size: 14px;
+                    letter-spacing: 1.1px;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .footer-copyright-section{
+            padding-top: 20px;
+            text-align: center;
+            .footer-company-copyright{
+                color: white;
+                font-family: $opensans-regular;
+                font-size: 14px;
+            }
+            .sco-container{
+                padding-top: 50px;
+                .sco-link{
+                    display:grid;
+                    grid-template-rows: repeat(2,auto);
+                    justify-content: center;
+                    justify-items: center;
+                    text-decoration: none;
+                    .sco-logo{
+                        width: 120px;
+                    }
+                    .sco-tagline{
+                        padding-top: 10px;
+                        color:white;
+                        font-family: $opensans-regular;
+                        font-size: 10px;
+                        letter-spacing: 0.6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and ($medium-devices){
+    .site-footer{
+        .footer-container{
+            .footer-social-media-section{
+                grid-column-gap: 20px;
+                padding-bottom: 40px;
+            }
+            .footer-navigation-section{
+                display: grid;
+                grid-template-columns: repeat(2,200px);
+                justify-content: center;
+                grid-column-gap: 150px;
+                padding: 50px 0px;
+                .footer-nav-column{
+                    text-align: left;
+                    padding-left: 50px;
+                }
+            }
+            .footer-copyright-section{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                padding-top: 40px;
+                .footer-company-copyright{
+                    justify-self: left;
+                    align-self: center;
+                }
+                .sco-container{
+                    padding-top: 0px;
+                    justify-self: right;
+                }
+            }
+        }
+    }
+}

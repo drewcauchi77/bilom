@@ -1,0 +1,103 @@
+.user-account-welcome-screen{
+    position: absolute;
+    background: white;
+    height: calc(100vh - 92px);
+    width: 100vw;
+    top: 92px;
+    transition: .5s all;
+    right: -100vw;
+    z-index:51;
+    overflow: auto;
+    .container{
+        padding-top: 20px;
+        .close-user-welcome-screen{
+            display: none;
+        }
+        .welcome-details{
+            text-align: center;
+            .user-avatar{
+                border-radius: 50%;
+                height: 80px;
+            }
+            .user-name{
+                font-family: $ubuntu-bold;
+                font-size: 23px;
+                color: $site-black;
+            }
+        }
+        .account-manage-section{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            margin: 30px 0px;
+            border-bottom: 1px solid rgba(21,21,21,0.5);
+            cursor: pointer;
+            &:hover{
+                border-bottom: 1px solid $site-black;
+            }
+            h3{
+                font-family: $opensans-regular;
+                font-size: 16px;
+                color: $site-black;
+                margin: 0px;
+                padding-bottom: 15px;
+            }
+            img{
+                justify-self: end;
+                height: 25px;
+            }
+        }
+        .log-out{
+            background-color: $site-red;
+            border: 1px solid $site-red;
+            height: 50px;
+            width: 100%;
+            text-transform: uppercase;
+            font-family: "UbuntuMedium",sans-serif;
+            font-size: 14px;
+            letter-spacing: .7px;
+            cursor: pointer;
+            transition: .5s all;
+            text-align: center;
+            a{
+                color: #fff;
+                text-decoration: none;
+                line-height: 48px;
+            }
+            &:hover{
+                background-color: transparent;
+                a{
+                    color: $site-red;
+                }
+            }
+        }
+    }
+    &.focus{
+        right: 0;
+    }
+}
+
+@media only screen and ($large-devices){
+    .user-account-welcome-screen{
+        max-width: 350px;
+        top: -141px;
+        height: 100vh;
+        z-index: 55;
+        .container{
+            padding-top: 40px;
+            .close-user-welcome-screen{
+                display: block;
+                float: right;
+                cursor: pointer;
+            }
+            .welcome-details{
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+@media only screen and ($xl-devices){
+    .user-account-welcome-screen{
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,154 @@
+.user-account-dashboard{
+    position: absolute;
+    background: white;
+    height: calc(100vh - 92px);
+    width: 100vw;
+    top: 92px;
+    transition: .5s all;
+    right: -100vw;
+    z-index: 51;
+    overflow: auto;
+    .go-back-welcome-screen{
+        cursor: pointer;
+    }
+    .dashboard-settings-title{
+        text-align: center;
+        font-family: $ubuntu-bold;
+        font-size: 23px;
+    }
+    #adduser{
+        display: grid;
+        grid-template-areas: 'username'
+            'usersurname'
+            'useremail'
+            'userphone'
+            'submitone'
+            'userpass'
+            'userpassconfirm'
+            'submittwo';
+        .form-row{
+            display: grid;
+            label{
+                padding-left: 15px;
+                font-family: $opensans-semibold;
+                font-size: 14px;
+                padding-bottom: 5px;
+            }
+            input{
+                height: 50px;
+                padding: 0px 15px;
+                width: calc(100% - 30px);
+                border: 1px solid rgba(21,21,21,0.5);
+                font-family: $opensans-regular;
+                font-size: 14px;
+                position: relative;
+                &:focus{
+                    border-color: $site-black;
+                    &::placeholder{
+                        color: $site-black;
+                    }
+                }
+            }
+        }
+        .form-name{
+            grid-area: username;
+        }
+        .form-surname{
+            grid-area: usersurname;
+        }
+        .form-email{
+            grid-area: useremail;
+        }
+        .form-submit{
+            grid-area: submitone;
+        }
+        .form-password{
+            grid-area: userpass;
+        }
+        .form-password-confirm{
+            grid-area: userpassconfirm;
+        }
+        .form-table{
+            grid-area: userphone;
+            margin: 15px 0px;
+            tbody{
+                tr{
+                    display: grid;
+                    th{
+                        text-align: left;
+                        padding-bottom: 5px;
+                        label{
+                            padding-left: 15px;
+                            font-family: $opensans-semibold;
+                            font-size: 14px;
+                            padding-bottom: 5px;
+                        }
+                    }
+                    td{
+                        input{
+                            height: 50px;
+                            padding: 0px 15px;
+                            width: calc(100% - 30px);
+                            border: 1px solid rgba(21,21,21,0.5);
+                            font-family: $opensans-regular;
+                            font-size: 14px;
+                            position: relative;
+                            &:focus{
+                                border-color: $site-black;
+                                &::placeholder{
+                                    color: $site-black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .form-change-password{
+            grid-area: submittwo;
+        }
+        #updateuser{
+            background-color: $site-red;
+            border: 1px solid $site-red;
+            height: 50px;
+            width: 100%;
+            color: white;
+            text-transform: uppercase;
+            font-family: $ubuntu-medium;
+            font-size: 14px;
+            letter-spacing: 0.7px;
+            cursor: pointer;
+            transition: 0.5s all;
+            &:hover{
+                background-color: transparent;
+                color: $site-red; 
+            }
+        }
+    }
+    &.focus{
+        right: 0;
+    }
+}
+
+@media only screen and ($large-devices){
+    .user-account-dashboard{
+        max-width: 350px;
+        top: -121px;
+        height: 100vh;
+        z-index: 55;
+        .container{
+            padding-top: 40px;
+            .close-user-welcome-screen{
+                display: block;
+                float: right;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media only screen and ($xl-devices){
+    .user-account-dashboard{
+        max-width: 400px;
+    }
+}
