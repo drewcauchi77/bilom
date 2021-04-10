@@ -328,10 +328,10 @@ $post_slug = $post->post_name;
 <script src="<?php echo get_template_directory_uri();?>/js/header.js"></script>
 <?php if($post_slug == 'contact-us'){ ?>
 	<script src="<?php echo get_template_directory_uri();?>/js/contact-us-map.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh9loTRlWJ1yzQlCjQ88wRqvXZ2sZ3-_M&callback=initMap" async defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap" async defer></script>
 <?php }else if($post_slug == 'properties'){ ?>
 	<script src="<?php echo get_template_directory_uri();?>/js/properties-map.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh9loTRlWJ1yzQlCjQ88wRqvXZ2sZ3-_M&callback=initPropertiesMap" async defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initPropertiesMap" async defer></script>
 <?php } ?>
 <script src="<?php echo get_template_directory_uri();?>/js/home.js?v=4356623"></script>
 <script src="<?php echo get_template_directory_uri();?>/js/single-property.js"></script>
